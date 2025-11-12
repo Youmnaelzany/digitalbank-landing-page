@@ -47,31 +47,31 @@ const navigationLinks = [
 const socialMediaLinks = [
   {
     content: (
-      <FaSquareFacebook className="size-7 cursor-pointer text-white transition-colors duration-300 ease-in-out hover:text-[#30C88F]" />
+      <FaSquareFacebook className="size-6 cursor-pointer text-white transition-colors duration-300 ease-in-out hover:text-[#30C88F]" />
     ),
     toolTip: "Facebook",
   },
   {
     content: (
-      <FaYoutube className="size-7 cursor-pointer text-white transition-colors duration-300 ease-in-out hover:text-[#30C88F]" />
+      <FaYoutube className="size-6 cursor-pointer text-white transition-colors duration-300 ease-in-out hover:text-[#30C88F]" />
     ),
     toolTip: "YouTube",
   },
   {
     content: (
-      <FaXTwitter className="size-7 cursor-pointer text-white transition-colors duration-300 ease-in-out hover:text-[#30C88F]" />
+      <FaXTwitter className="size-6 cursor-pointer text-white transition-colors duration-300 ease-in-out hover:text-[#30C88F]" />
     ),
     toolTip: "XTwitter",
   },
   {
     content: (
-      <FaPinterest className="size-7 cursor-pointer text-white transition-colors duration-300 ease-in-out hover:text-[#30C88F]" />
+      <FaPinterest className="size-6 cursor-pointer text-white transition-colors duration-300 ease-in-out hover:text-[#30C88F]" />
     ),
     toolTip: "Pinterest",
   },
   {
     content: (
-      <FaInstagram className="size-7 cursor-pointer text-white transition-colors duration-300 ease-in-out hover:text-[#30C88F]" />
+      <FaInstagram className="size-6 cursor-pointer text-white transition-colors duration-300 ease-in-out hover:text-[#30C88F]" />
     ),
     toolTip: "Instagram ",
   },
@@ -91,7 +91,9 @@ const Footer = () => {
                     <Link href={"/"}>{social.content}</Link>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{social.toolTip}</p>
+                    <p className="text-sm leading-[115%] font-normal tracking-normal text-white">
+                      {social.toolTip}
+                    </p>
                   </TooltipContent>
                 </Tooltip>
               </li>
@@ -117,7 +119,7 @@ const Footer = () => {
         <Button
           type="button"
           size={"lg"}
-          className="rounded-full bg-linear-to-r from-[#33D35E] to-[#2AB6D9] text-sm leading-[200%] font-bold tracking-normal text-white"
+          className="cursor-pointer rounded-full bg-linear-to-r from-[#33D35E] to-[#2AB6D9] text-sm leading-[200%] font-bold tracking-normal text-white"
         >
           Request Invite
         </Button>

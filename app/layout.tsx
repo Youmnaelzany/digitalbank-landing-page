@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Public_Sans } from "next/font/google";
 
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 import "./globals.css";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${publicSans.variable} mx-auto max-w-7xl antialiased`}>
+        <Header />
         {children}
         <Footer />
       </body>
