@@ -23,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${publicSans.variable} mx-auto max-w-7xl antialiased`}>
+      <body
+        suppressHydrationWarning
+        className={`${publicSans.variable} mx-auto max-w-7xl antialiased`}
+      >
         <Header />
         {children}
         <Footer />

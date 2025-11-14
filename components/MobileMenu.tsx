@@ -5,44 +5,50 @@ import { TextAlignJustify } from "lucide-react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 
 import { navigationLinks } from "./Header";
 
-const MobileMenu = () => {
+export default function MobileMenu() {
   return (
     <div className="lg:hidden">
       <Sheet>
-        <SheetTrigger>
+        {/* Accessible Trigger Button */}
+        <SheetTrigger aria-label="Open mobile menu">
           <TextAlignJustify className="size-6 text-[#2D314D]" />
         </SheetTrigger>
-        <SheetContent side="top">
+
+        {/* Mobile Menu */}
+        <SheetContent
+          side="top"
+          aria-labelledby="mobile-menu-title"
+          role="dialog"
+        >
           <SheetHeader>
-            <SheetTitle></SheetTitle>
-            <SheetDescription>
-              <nav className="">
-                <ul className="flex flex-col items-center justify-center gap-8 p-8">
-                  {navigationLinks.map((navigation, idx) => (
-                    <li key={idx} className="">
-                      <Link
-                        href={navigation.link}
-                        className="cursor-pointer text-lg leading-[155%] font-normal tracking-[-0.25px] text-[#2D314D] transition-colors duration-300 ease-in-out"
-                      >
-                        {navigation.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </SheetDescription>
+            {/* Hidden Title for Accessibility */}
+            <h2 id="mobile-menu-title" className="sr-only">
+              Mobile navigation menu
+            </h2>
+
+            <nav aria-labelledby="mobile-menu-title">
+              <ul className="flex flex-col items-center gap-8 p-8">
+                {navigationLinks.map((nav, index) => (
+                  <li key={index}>
+                    <Link
+                      href={nav.link}
+                      className="text-lg leading-[155%] font-normal tracking-[-0.25px] text-[#2D314D] transition-colors duration-300 hover:text-[#30C88F] focus-visible:ring-2 focus-visible:ring-[#33D35E] focus-visible:outline-none"
+                    >
+                      {nav.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </SheetHeader>
         </SheetContent>
       </Sheet>
     </div>
   );
-};
-export default MobileMenu;
+}

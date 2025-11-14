@@ -1,3 +1,9 @@
+import LatestArticles from "@/components/LatestArticles";
+
 export default function Home() {
-  return <main className="">Hello</main>;
+  return (
+    <main className="">
+      <LatestArticles />
+    </main>
+  );
 }
