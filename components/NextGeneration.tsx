@@ -53,7 +53,7 @@ export default function NextGeneration() {
         <Button
           type="button"
           size="lg"
-          className="rounded-full bg-linear-to-r from-[#33D35E] to-[#2AB6D9] text-sm leading-[200%] font-bold text-white shadow-md"
+          className="cursor-pointer rounded-full bg-linear-to-r from-[#33D35E] to-[#2AB6D9] text-sm leading-[200%] font-bold text-white shadow-md"
         >
           Request Invite
         </Button>
