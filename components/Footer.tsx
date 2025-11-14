@@ -47,7 +47,6 @@ export default function Footer() {
           alt="Digitalbank Logo"
           width={153}
           height={21}
-          priority={false}
         />
 
         <ul className="flex items-center justify-center gap-4">
@@ -97,7 +96,7 @@ export default function Footer() {
         <Button
           type="button"
           size="lg"
-          className="rounded-full bg-linear-to-r from-[#33D35E] to-[#2AB6D9] text-sm font-bold text-white"
+          className="rounded-full bg-linear-to-r from-[#33D35E] to-[#2AB6D9] text-sm leading-[200%] font-bold text-white shadow-md"
         >
           Request Invite
         </Button>

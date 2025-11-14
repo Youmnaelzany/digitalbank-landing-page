@@ -35,7 +35,7 @@ export default function WhyDigitalBank() {
   return (
     <section
       aria-labelledby="why-digitalbank-title"
-      className="flex flex-col items-center justify-center gap-12 px-6 py-16 md:gap-18 md:px-10 md:py-20 lg:items-start lg:px-12"
+      className="flex flex-col items-center justify-center gap-12 bg-[#F4F5F7] px-6 py-16 md:gap-18 md:px-10 md:py-20 lg:items-start lg:px-12"
     >
       {/* Section Intro */}
       <div className="flex max-w-[635px] flex-col items-center gap-4 text-center md:gap-8 lg:items-start lg:text-left">
@@ -55,16 +55,17 @@ export default function WhyDigitalBank() {
       {/* Features Grid */}
       <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-0">
         {digitalBank.map((item) => (
-          <div
+          <article
             key={item.id}
             className="flex flex-col items-center gap-10 md:items-start"
           >
             <Image
               src={item.icon}
-              alt={item.title}
+              alt={`${item.title} icon`}
               width={72}
               height={72}
               className="object-contain"
+              priority={item.id === 1} // optional: prioritize the first image
             />
 
             <div className="flex flex-col items-center gap-6 text-center md:items-start md:text-left">
@@ -76,7 +77,7 @@ export default function WhyDigitalBank() {
                 {item.description}
               </p>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
